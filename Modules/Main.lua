@@ -137,7 +137,7 @@ function main:Init()
 				if newItem then
 					itemLib.normaliseQuality(newItem)
 					self.uniqueDB[targetVersion].list[newItem.name] = newItem
-				elseif launch.devMode then
+				else
 					ConPrintf("Unique DB unrecognised item of type '%s':\n%s", type, raw)
 				end
 			end
@@ -159,7 +159,7 @@ function main:Init()
 					itemLib.craftItem(newItem)
 				end
 				self.rareDB[targetVersion].list[newItem.name] = newItem
-			elseif launch.devMode then
+			else
 				ConPrintf("Rare DB unrecognised item:\n%s", raw)
 			end
 		end

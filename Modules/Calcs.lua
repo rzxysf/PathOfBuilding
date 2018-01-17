@@ -230,9 +230,6 @@ function calcs.buildOutput(build, mode)
 		if env.modDB:Sum("FLAG", nil, "UnholyMight") then
 			t_insert(combatList, "Unholy Might")
 		end
-		if env.modDB:Sum("FLAG", nil, "HerEmbrace") then
-			t_insert(combatList, "Her Embrace")
-		end
 		for name in pairs(env.buffs) do
 			t_insert(buffList, name)
 		end
